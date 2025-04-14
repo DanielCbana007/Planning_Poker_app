@@ -1,0 +1,74 @@
+:root {
+    --purple1: #421F73;
+    --purple2: #6936b0;
+    --light-purple1: #a094b5;
+    --light-purple2: #867a9a;
+    --light-purple3: #7a6c9068;
+}
+
+.ilogo-section {
+    display: flex;
+    position: absolute;
+    align-items: center;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    fill: #FFFF;
+}
+
+.section {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    min-height: 100vh;
+    background: radial-gradient(ellipse, var(--purple1), var(--light-purple3), var(--light-purple2));
+    background-color: var(--purple1);
+    color: white;
+}
+
+.form-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-name {
+    display: flex;
+    flex-direction: column;
+}
+
+.section-name>* {
+    margin: 5px;
+}
+
+.input {
+    width: 40vh;
+    height: 5vh;
+    background-color: transparent;
+    border: solid var(--purple2) 2px;
+    border-radius: 30px;
+    color: white;
+    padding-left: 1em;
+    outline: none;
+}
+
+.button {
+    margin: 2rem;
+    height: 5vh;
+    width: 150px;
+    border: solid transparent;
+    border-radius: 25px;
+    color: var(--light-purple1);
+    background-color: var(--light-purple3);
+    font-weight: 600;
+}
+
+.button:active {
+    background-color: white;
+}
