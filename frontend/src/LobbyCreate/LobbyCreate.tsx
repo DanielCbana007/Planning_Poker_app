@@ -1,14 +1,32 @@
 import { useState } from 'react';
 import './LobbyCreate.css'
+import useUserValidator from '../hooks/useUserValidator ';
 
 const GameCreation = () => {
 
     const [name, setName] = useState('');
+    const [inputError, setInputError] = useState(false);
+
+    const {validate} = useUserValidator();
 
     const create = ( e: React.FormEvent ) =>{
-        e.preventDefault();
-        console.log(name);        
-    }
+        e.preventDefault();    
+        
+        const {isValid, errors} = validate(name);
+
+        if (!isValid) {
+            errors.forEach( error => {
+                console.error(error);
+            });
+
+            setInputError(true);
+            return;
+        }
+        
+        setInputError(false);
+        setName('');
+        console.log('OK');        
+    };
 
     return (
         <>
@@ -21,8 +39,10 @@ const GameCreation = () => {
                     <div className='section-name'>
                         <label htmlFor="title">Nombra la partida.</label>
                         <input 
+                            itemID='inputId'
+                            value={name}
                             onChange={ e => setName(e.target.value) } 
-                            className='input' 
+                            className={`input ${ inputError ? 'error' : ''}`}
                             type="text" 
                             name="" 
                             id="" 
