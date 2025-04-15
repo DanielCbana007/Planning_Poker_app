@@ -1,4 +1,6 @@
 :root {
+    --red: #cf2a2a;
+    --light-red: #ce6b6b6f;
     --purple1: #421F73;
     --purple2: #6936b0;
     --light-purple1: #a094b5;
@@ -56,6 +58,11 @@
     color: white;
     padding-left: 1em;
     outline: none;
+}
+
+.invalid{
+    border-color: var(--red);
+    background-color: var(--light-red);
 }
 
 .button {
