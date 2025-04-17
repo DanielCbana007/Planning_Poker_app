@@ -1,12 +1,14 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 // import GameCreation from './LobbyCreate/LobbyCreate'
+// import CreateAdmin from './CreateAdmin/CreateAdmin'
 import './styles.css'
-import CreateAdmin from './CreateAdmin/CreateAdmin'
+import DisplayTable from './DisplayTable/DisplayTable'
 
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <CreateAdmin></CreateAdmin>
+    {/* <GameCreation></GameCreation> */}
+    <DisplayTable></DisplayTable>
   </StrictMode>,
 )

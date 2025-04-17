@@ -24,12 +24,8 @@
 }
 
 .section {
-    margin: 0;
-    padding: 0;
     display: grid;
     min-height: 100vh;
-    background: radial-gradient(ellipse, var(--purple1), var(--light-purple3), var(--light-purple2));
-    background-color: var(--purple1);
     color: white;
 }
 
