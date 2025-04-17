@@ -1,4 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+:root {
+    --red: #cf2a2a;
+    --light-red: #ce6b6b6f;
+    --purple1: #421F73;
+    --purple2: #6936b0;
+    --light-purple1: #a094b5;
+    --light-purple2: #867a9a;
+    --light-purple3: #7a6c9068;
+}
 
 * {
     margin: 0;
@@ -7,6 +16,12 @@
 }
 
 body {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    min-height: 100vh;
+    background: radial-gradient(ellipse, var(--purple1), var(--light-purple3), var(--light-purple2));
+    background-color: var(--purple1);
     font-family: "Roboto", sans-serif;
     font-optical-sizing: auto;
     font-weight: 500;
